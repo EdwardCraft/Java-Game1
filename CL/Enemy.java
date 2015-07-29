@@ -30,13 +30,8 @@ public class Enemy extends GameObject implements EntityB{
 
 	//method for moving objets
 	public void tick(){
-		y+=speed;
-		if(y > SpaceGame.HEIGHT * SpaceGame.SCALE){
-			
-			x= r.nextInt(640);
-			y =-10;
-		}
-
+		X();
+		
 		for(int i=0;i < game.ea.size();i++)
 		{
 			EntityA tempEnt =  game.ea.get(i);
@@ -51,6 +46,22 @@ public class Enemy extends GameObject implements EntityB{
 
 		
 		anim.runAnimation();
+	}
+
+	public void X(){
+
+		x+=speed;
+       
+        if(x > 320 * SpaceGame.SCALE){
+			
+			y= r.nextInt(640);
+
+			x =-10;
+		}
+
+
+
+
 	}
 
 	public void render(Graphics g){
