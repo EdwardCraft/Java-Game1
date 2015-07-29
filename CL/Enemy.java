@@ -18,7 +18,7 @@ public class Enemy extends GameObject implements EntityB{
 	private SpaceGame game;
 	private Controller c;
 	Animation anim;
-
+	
 
 	public Enemy(double x, double y, Textures tex,Controller c, SpaceGame game){
 		super(x,y);
@@ -29,8 +29,11 @@ public class Enemy extends GameObject implements EntityB{
 	}
 
 	//method for moving objets
+
 	public void tick(){
-		X();
+		Y();
+		
+
 		
 		for(int i=0;i < game.ea.size();i++)
 		{
@@ -49,18 +52,22 @@ public class Enemy extends GameObject implements EntityB{
 	}
 
 	public void X(){
-
 		x+=speed;
-       
-        if(x > 320 * SpaceGame.SCALE){
-			
+       	if(x > 320 * SpaceGame.SCALE)
+       	{
 			y= r.nextInt(640);
-
 			x =-10;
 		}
 
+	}
 
-
+	public void Y(){
+		y+=speed;
+       	if(y >SpaceGame.HEIGHT* SpaceGame.SCALE)
+       	{
+			x= r.nextInt(640);
+			y =-10;
+		}
 
 	}
 

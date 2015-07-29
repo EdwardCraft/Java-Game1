@@ -47,14 +47,21 @@ public class player extends GameObject implements EntityA{
 		for(int i=0;i<game.eb.size(); i++)
 		{
 			EntityB tempEnt= game.eb.get(i);
+			
 			if(Physics.Collision(this,tempEnt))
 			{
 				controller.removeEntity(tempEnt);
 				SpaceGame.HEALTH -= 10;
 				game.setEnemy_killed(game.getEnemy_killed()+1);
+				if(SpaceGame.HEALTH == 100)
+		        {
+		        EntityA tempEnta= game.ea.get(i);
+		        controller.removeEntity(tempEnta);		
+				}
 			}
 		}
         //////////////////////////////////////////////////////////////////////////////
+		
 		anim.runAnimation();
 
 	}
