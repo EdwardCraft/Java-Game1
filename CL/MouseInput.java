@@ -16,11 +16,7 @@ public class MouseInput implements MouseListener{
     	int mx=e.getX();
 		int my=e.getY();
 
-	/*
-	public Rectangle playButton  =  new   Rectangle(SpaceGame.WIDTH/2+120,150,100,50);
-	public Rectangle helpyButton  =  new  Rectangle(SpaceGame.WIDTH/2+120,250,100,50);
-	public Rectangle quitButton  =  new   Rectangle(SpaceGame.WIDTH/2+120,350,100,50);
-	*/		
+		
 		//playButton
 	    if(mx >= SpaceGame.WIDTH/2+120 && mx  <= SpaceGame.WIDTH/2+220)
 	    {

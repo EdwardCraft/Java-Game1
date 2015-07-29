@@ -29,6 +29,7 @@ public class SpaceGame extends Canvas implements Runnable{
 	private BufferedImage image = new BufferedImage(WIDTH,HEIGHT,BufferedImage.TYPE_INT_RGB);
     private BufferedImage spriteSheet = null;
     private BufferedImage background  = null;
+    private BufferedImage background1  = null;
     private player p;
     private Controller c; 
     private boolean is_shooting=false;
@@ -58,8 +59,8 @@ public class SpaceGame extends Canvas implements Runnable{
         try{
 
             spriteSheet = loader.loadImage("/IMG/SpriteBeta.png");
-            background  = loader.loadImage("/IMG/fondo.png");
-
+            background  = loader.loadImage("/IMG/fondo1.png");
+            background1  = loader.loadImage("/IMG/fondo.png");
         }catch(IOException e){
         e.printStackTrace();    
         }
@@ -175,8 +176,9 @@ public class SpaceGame extends Canvas implements Runnable{
     	//this is were we are goig to draw  
 
     	g.drawImage(image,0,0,getWidth(),getHeight(), this);
-        g.drawImage(background,0,0,null);
+        g.drawImage(background1,0,0,null);
         if(State == STATE.GAME){
+            g.drawImage(background,0,0,null);
             p.render(g);
             c.render(g);
 
