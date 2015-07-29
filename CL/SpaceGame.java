@@ -57,8 +57,8 @@ public class SpaceGame extends Canvas implements Runnable{
 
         try{
 
-            spriteSheet = loader.loadImage("/CL/SpriteBeta.png");
-            background  = loader.loadImage("/CL/fondo.png");
+            spriteSheet = loader.loadImage("/IMG/SpriteBeta.png");
+            background  = loader.loadImage("/IMG/fondo.png");
 
         }catch(IOException e){
         e.printStackTrace();    
