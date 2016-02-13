@@ -178,6 +178,7 @@ public class SpaceGame extends Canvas implements Runnable{
     	g.drawImage(image,0,0,getWidth(),getHeight(), this);
         g.drawImage(background1,0,0,null);
         if(State == STATE.GAME){
+            if(HEALTH != 0){
             g.drawImage(background,0,0,null);
             p.render(g);
             c.render(g);
@@ -190,6 +191,10 @@ public class SpaceGame extends Canvas implements Runnable{
 
             g.setColor(Color.white);
             g.drawRect(5,5,200,50);
+            }else{
+                State = STATE.MENU;
+            }
+         
 
         }else if(State == STATE.MENU){
             menu.render(g);

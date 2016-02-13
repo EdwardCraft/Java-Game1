@@ -51,7 +51,7 @@ public class player extends GameObject implements EntityA{
 			if(Physics.Collision(this,tempEnt))
 			{
 				controller.removeEntity(tempEnt);
-				SpaceGame.HEALTH -= 10;
+				SpaceGame.HEALTH -= 40;
 				game.setEnemy_killed(game.getEnemy_killed()+1);
 				if(SpaceGame.HEALTH == 100)
 		        {
