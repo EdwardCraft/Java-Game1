@@ -84,7 +84,7 @@ public class SpaceGame extends Canvas implements Runnable{
 
 
 
-    private synchronized void start(){
+    public synchronized void start(){
     	if(running)
     		return;
 
@@ -93,7 +93,7 @@ public class SpaceGame extends Canvas implements Runnable{
      	thread.start(); 
     }
 
-    private synchronized void stop(){
+    public synchronized void stop(){
     	if(!running)
     		return;
 
@@ -243,20 +243,6 @@ public class SpaceGame extends Canvas implements Runnable{
 
     }
 
-	public static void main(String args[]){
-		SpaceGame game= new SpaceGame();
-		game.setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
-
-        JFrame  frame = new JFrame(game.TITLE);
-        frame.add(game);
-        frame.pack();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        game.start();
-
-   }
 
    public BufferedImage getSpriteSheet(){
     return spriteSheet;
