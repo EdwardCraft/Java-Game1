@@ -193,6 +193,7 @@ public class SpaceGame extends Canvas implements Runnable{
             g.drawRect(5,5,200,50);
             }else{
                 State = STATE.MENU;
+                HEALTH = 100 * 2;
             }
          
 
