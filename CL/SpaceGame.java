@@ -183,14 +183,11 @@ public class SpaceGame extends Canvas implements Runnable{
             p.render(g);
             c.render(g);
 
-            g.setColor(Color.gray);
-            g.fillRect(5,5,200,50);
-
             g.setColor(Color.green);
-            g.fillRect(5,5,HEALTH,50);
+            g.fillRect(5,5,HEALTH,20);
 
             g.setColor(Color.white);
-            g.drawRect(5,5,200,50);
+            g.drawRect(5,5,200,20);
             }else{
                 State = STATE.MENU;
                 HEALTH = 100 * 2;

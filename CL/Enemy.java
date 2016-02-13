@@ -14,7 +14,7 @@ public class Enemy extends GameObject implements EntityB{
 	
 	private Textures tex;
 	Random r= new  Random();
-	private int speed = r.nextInt(3)+1;
+	private int speed = r.nextInt(6)+1;
 	private SpaceGame game;
 	private Controller c;
 	Animation anim;
@@ -66,7 +66,7 @@ public class Enemy extends GameObject implements EntityB{
        	if(y >SpaceGame.HEIGHT* SpaceGame.SCALE)
        	{
 			x= r.nextInt(640);
-			y =-10;
+			y =-30;
 		}
 
 	}
