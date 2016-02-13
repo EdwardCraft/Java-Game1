@@ -21,13 +21,20 @@ public class MouseInput implements MouseListener{
 	    if(mx >= SpaceGame.WIDTH/2+120 && mx  <= SpaceGame.WIDTH/2+220)
 	    {
 
-	    	if(my >= 150 && my<=200)
+            if(my >= 150 && my<=200){
+                //Pressed Play Button
+                SpaceGame.State=SpaceGame.STATE.GAME;
+            }
+
+	    	if(my >= 350 && my<=400)
 	    	{
 	    		//Pressed Play Button
-	    		SpaceGame.State=SpaceGame.STATE.GAME;
+	    		System.exit(1);
 	    	}
+            
 
 	    }
+
        
     }
 
@@ -38,7 +45,6 @@ public class MouseInput implements MouseListener{
 
     @Override
     public void mouseEntered(MouseEvent me) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
