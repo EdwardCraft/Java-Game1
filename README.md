@@ -1,5 +1,5 @@
 # Space Game
-====================
+
 This is my first game developed using the programing language Java, is a 2D spaceship shooter. I developed this game, when I was starting to learn JAVA, and what better  way to  learn a  new  programing language
 than to make a game. 
 
